@@ -14,7 +14,8 @@ header {
     padding-top: 1vh;
     padding-bottom: 1vh;
     margin-bottom: 4vh;
-    border: 2px solid black;
+    border-bottom: 2px solid black;
+    width: 100vw;
 }
 
 .regroupement {
@@ -27,8 +28,7 @@ header {
     text-align: center;
     display: flex;
     flex-direction: column;
-  margin-left: 5vw;
-  margin-right: 5vw;
+ 
   background: linear-gradient(165deg, #536976 ,#292E49);
   padding: 5px;
   border: 2px solid black;
@@ -42,4 +42,20 @@ header {
 
 body {
     background-image: url('../image/freeze.jpg');
+}
+
+
+@media only screen and (max-width: 992px) {
+
+    .regroupement {
+        display: block;
+    }
+
+    .gauche , .droite {
+        width: 100vw;
+        padding: 0;
+        border: none;
+        margin-bottom: 4vh;
+    }
+
 }
