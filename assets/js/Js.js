@@ -1,0 +1,118 @@
+let citationgauche = document.getElementById('citationgauche');
+let citationsgauche = document.getElementById('affichercitationgauche');
+let listecitationgauchedebut = ['Ekip','Je me sens',"J'arrive",'Tellement',"J'ai fait un rêve",'Chen zen'];
+let listecitationgauchemilieu = [', ekip,','s/o','comme','déter comme','connecté','dans la cuisine'];
+let listecitationgauchefin = [', ekip.',"jvois flou",'le KGB.','pétasse',"j'ai des vertiges",'la prise',"jsuis dans le lin",'un mort vivant'];
+
+
+
+citationgauche.addEventListener("click",generergauche);
+
+function generergauche() {
+    let nbcitationinput = document.getElementById('nombrecitation');
+    let myRegexnb = /^\d+$/;
+    let myRegexnblimit = /^[1-5]$/;
+
+    if (nbcitationinput.value.trim() == "") {
+        let myError = document.getElementById('error');
+        myError.innerHTML = "Veuillez choisir combien de citations vous désirez générer";
+        myError.style.color = "red";
+        nbcitationinput.style.borderColor = "red";
+        generergauche.preventDefault();
+      } else if (myRegexnb.test(nbcitationinput.value) == false) {
+        let myError = document.getElementById('error');
+        myError.innerHTML = "Veuillez renseigner des chiffres uniquement";
+        myError.style.color = "red";
+        nbcitationinput.style.borderColor = "red";
+        generergauche.preventDefault();
+      } else if (myRegexnblimit.test(nbcitationinput.value) == false) {
+        let myError = document.getElementById('error');
+        myError.innerHTML = "Veuillez renseigner un chiffre entre 1 et 5 uniquement";
+        myError.style.color = "red";
+        myInput.style.borderColor = "red";
+        generergauche.preventDefault();
+      }  else {
+        let myError = document.getElementById('error');
+
+        while (myError.firstChild) {
+            myError.removeChild(myError.firstChild);
+        }
+      }
+
+    while (citationsgauche.firstChild) {
+        citationsgauche.removeChild(citationsgauche.firstChild);
+    }
+    for (i=0;i<nbcitationinput.value;i++) {
+    let randomNumber = Math.floor(Math.random()*(listecitationgauchedebut.length));
+    let randomNumber2 = Math.floor(Math.random()*(listecitationgauchemilieu.length));
+    let randomNumber3 = Math.floor(Math.random()*(listecitationgauchefin.length));
+    let affichercitationgauche = document.createElement('p');
+    affichercitationgauche.textContent = listecitationgauchedebut[randomNumber] + " " + listecitationgauchemilieu[randomNumber2] + " " + listecitationgauchefin[randomNumber3];
+    citationsgauche.appendChild(affichercitationgauche);
+}
+}
+
+let citationdroite = document.getElementById('citationdroite');
+let citationsdroite = document.getElementById('affichercitationdroite');
+let listecitationdroitedebut = ['Reda','Abdel','Loïc'];
+let listecitationdroitemilieu = ['pas','quinze','long'];
+let listecitationdroitefin = ['la','heure','week'];
+
+citationdroite.addEventListener("click",genererdroite);
+
+function genererdroite() {
+    let nbcitationinput = document.getElementById('nombrecitationdroite');
+    let myRegexnb = /^\d+$/;
+    let myRegexnblimit = /^[1-5]$/;
+
+    if (nbcitationinput.value.trim() == "") {
+        let myError = document.getElementById('error2');
+        myError.innerHTML = "Veuillez choisir combien de citations vous désirez générer";
+        myError.style.color = "red";
+        nbcitationinput.style.borderColor = "red";
+        genererdroite.preventDefault();
+      } else if (myRegexnb.test(nbcitationinput.value) == false) {
+        let myError = document.getElementById('error2');
+        myError.innerHTML = "Veuillez renseigner des chiffres uniquement";
+        myError.style.color = "red";
+        nbcitationinput.style.borderColor = "red";
+        genererdroite.preventDefault();
+      } else if (myRegexnblimit.test(nbcitationinput.value) == false) {
+        let myError2 = document.getElementById('error2');
+        myError2.innerHTML = "Veuillez renseigner un chiffre entre 1 et 5 uniquement";
+        myError2.style.color = "red";
+        myInput2.style.borderColor = "red";
+        genererdroite.preventDefault();
+      } else {
+        let myError2 = document.getElementById('error2');
+        while (myError2.firstChild) {
+            myError2.removeChild(myError2.firstChild);
+        }
+      }
+
+    while (citationsdroite.firstChild) {
+        citationsdroite.removeChild(citationsdroite.firstChild);
+    }
+    for (i=0;i<nbcitationinput.value;i++) {
+    let randomNumber = Math.floor(Math.random()*(listecitationdroitedebut.length));
+    let randomNumber2 = Math.floor(Math.random()*(listecitationdroitemilieu.length));
+    let randomNumber3 = Math.floor(Math.random()*(listecitationdroitefin.length));
+    let affichercitationdroite = document.createElement('p');
+    affichercitationdroite.textContent = listecitationdroitedebut[randomNumber] + " " + listecitationdroitemilieu[randomNumber2] + " " + listecitationdroitefin[randomNumber3];
+    citationsdroite.appendChild(affichercitationdroite);
+}
+}
+
+
+
+document.getElementById('nombrecitation').addEventListener('keyup', (event) => {
+    if (event.key === "Enter") {
+        generergauche();
+    }
+})
+
+document.getElementById('nombrecitationdroite').addEventListener('keyup', (event) => {
+    if (event.key === "Enter") {
+        genererdroite();
+    }
+})

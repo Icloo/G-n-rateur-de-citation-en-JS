@@ -1,0 +1,45 @@
+h1 {
+    text-align: center;
+    color: white;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans';
+}
+
+header {
+    background:linear-gradient(45deg, #536976 ,#292E49);
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    margin-bottom: 4vh;
+    border: 2px solid black;
+}
+
+.regroupement {
+    display: flex;
+    width: 100vw;
+}
+
+.gauche , .droite {
+    width: 50%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  background: linear-gradient(165deg, #536976 ,#292E49);
+  padding: 5px;
+  border: 2px solid black;
+  box-shadow: #536976 2px 2px 2px 2px;
+
+}
+
+#citationdroite , #citationgauche {
+    margin-top: 2vh;
+}
+
+body {
+    background-image: url('../image/freeze.jpg');
+}
