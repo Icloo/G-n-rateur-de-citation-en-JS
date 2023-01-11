@@ -136,7 +136,7 @@ fonddemacia.style.display = "block";
 
 if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
   // true for mobile device
-  fondbase.style.display = "block";
+  
   fondnoxus.style.display = "none";
   fonddemacia.style.display = "none";
 }
@@ -153,7 +153,7 @@ fonddemacia.style.display = "none";
 
 if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
   // true for mobile device
-  fondbase.style.display = "block";
+ 
   fondnoxus.style.display = "none";
   fonddemacia.style.display = "none";
 }
