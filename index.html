@@ -5,12 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/css.css">
-    <link href='https://fonts.googleapis.com/css?family=Noto Sans' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/c6bc2ecbf1.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital@0;1&family=IBM+Plex+Sans+Condensed:ital@0;1&family=IBM+Plex+Sans:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&family=IBM+Plex+Serif:ital@0;1&display=swap" rel="stylesheet">
+
    <title>Document</title>
 </head>
 <body>
     <header>
-    <h1>Choisissez votre camp</h1>
+    <h1><i class="fa-solid fa-scale-unbalanced-flip"></i> Choisissez votre camp <i class="fa-solid fa-scale-unbalanced"></i></h1>
 </header>
 <div id="myPhoto"></div>
 <video autoplay muted loop id="myVideo">
@@ -25,15 +27,16 @@
 
         <div class="gauche" id="gauchehover">
             <span class="heading">
-            <h2>Noxus</h2>
+            <h2><i class="fa-solid fa-skull"></i> Noxus <i class="fa-solid fa-skull"></i></h2>
             <div class="separateur"></div>
             <label for="nombrecitation">Combien de citation voulez vous ? (entre 1 et 5)</label>
             <div class="espaceur"></div>
             <input type="text" name="nombrecitation" id="nombrecitation" class="inputnb">
             <div id="error"></div>
-            <button id="citationgauche" class="bouton">Générer une citation</button>
+            <div id="citationgauche" class="bouton from-right">Générer une citation</div>
             <div class="espaceur"></div>
             <div id="affichercitationgauche"></div>
+
             
         </span>
         </div>
@@ -41,13 +44,13 @@
 
         <div class="droite" id="droitehover">
             <span class="heading">
-            <h2>Demacia</h2>
+            <h2><i class="fa-solid fa-shield-halved"></i> Demacia <i class="fa-solid fa-shield-halved"></i></h2>
             <div class="separateur"></div>
             <label for="nombrecitation">Combien de citation voulez vous ? (entre 1 et 5)</label>
             <div class="espaceur"></div>
             <input type="text" name="nombrecitation" id="nombrecitationdroite" class="inputnb">
             <div id="error2"></div>
-            <button id="citationdroite" class="bouton">Générer une citation</button>
+            <div id="citationdroite" class="bouton from-right">Générer une citation</div>
             <div class="espaceur"></div>
             <div id="affichercitationdroite"></div>
             
