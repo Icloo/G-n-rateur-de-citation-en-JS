@@ -250,5 +250,9 @@ header {
         border: none;
         margin-bottom: 4vh;
     }
+	
+	   h1 {
+      font-size: x-large;
+    }
 
 }
