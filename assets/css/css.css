@@ -274,5 +274,10 @@ p {
 	   h1 {
       font-size: x-large;
     }
+	
+	   #myPhoto {
+      width: 100vw;
+      height:100vh;
+    }
 
 }
