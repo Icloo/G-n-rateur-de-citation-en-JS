@@ -1,48 +1,164 @@
 h1 {
     text-align: center;
-    color: white;
+    color: #B87935;
 }
 
 body {
     margin: 0;
     padding: 0;
     font-family: 'Noto Sans';
+    color: #B87935;
 }
 
 header {
-    background:linear-gradient(45deg, #536976 ,#292E49);
+    background-color: #0A0A0C;
     padding-top: 1vh;
     padding-bottom: 1vh;
     margin-bottom: 4vh;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid #9D7F44;
     width: 100vw;
+    opacity: 0.95;
+    z-index: 90;
+   
 }
 
 .regroupement {
     display: flex;
     width: 100vw;
+    justify-content: space-around;
+   
 }
 
 .gauche , .droite {
-    width: 50%;
+    width: 33%;
     text-align: center;
     display: flex;
     flex-direction: column;
- 
-  background: linear-gradient(165deg, #536976 ,#292E49);
+  background-color: #0A0A0C;
   padding: 5px;
-  border: 2px solid black;
-  box-shadow: #536976 2px 2px 2px 2px;
-
+  border: 2px solid #0A0A0C;
+  box-shadow: #9D7F44 2px 2px 2px 2px; 
+    opacity: 0.95;
 }
+
+/* */
+
+
+.droite , .gauche {
+  
+  outline: 0.25em solid;
+  outline-offset: -1em;
+
+  position: relative;
+}
+  .droite::before, .droite::after , .gauche::before , .gauche::after {
+    content: '';
+    display: block;
+    position: absolute;
+    background: #0A0A0C;
+  }
+  
+  .droite::before , .gauche::before {
+    top: -0.1em; 
+    bottom: -0.1em;
+    left: 2em;
+    right: 2em;
+  }
+  
+  .droite::after , .gauche::after{
+    left: -0.1em;
+    right: -0.1em;
+    top: 2em;
+    bottom: 2em;
+  }
+  
+ 
+  .heading {
+    position: relative;
+    z-index: 100;
+  }
+
+
+
+
+/* */
 
 #citationdroite , #citationgauche {
     margin-top: 2vh;
 }
 
-body {
-    background-image: url('../image/freeze.jpg');
+#myPhoto {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+  background-image: url('../image/demaciavsnoxus.webp');
+  background-size: cover;
+  
 }
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    display: none;
+    z-index: -1;
+  }
+
+  #myVideo2 {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    display: none;
+    z-index: -1;
+  }
+
+  .separateur {
+    border-bottom: 2px solid #9D7F44;
+    width: 66%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3vh;
+  }
+
+  .espaceur {
+    height: 2vh;
+  }
+
+  .espaceurgros {
+    height: 8vh;
+  }
+
+  .bouton {
+    padding: 10px 0px 10px 0px;
+    background-color: #1E2123;
+    border: 2px solid #C2A657;
+    color: #84733D;
+    border-radius: 1px;
+    opacity: 0.8;
+    width: 33%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .inputnb {
+    width: 66%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    background-color: #2A343D;
+    height: 5vh;
+    border-style: none;
+    color: white;
+    text-align: center;
+  }
+
 
 
 @media only screen and (max-width: 992px) {
