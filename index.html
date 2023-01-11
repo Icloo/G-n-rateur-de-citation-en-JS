@@ -10,34 +10,54 @@
 </head>
 <body>
     <header>
-    <h1> Générateur de citation</h1>
+    <h1>Choisissez votre camp</h1>
 </header>
+<div id="myPhoto"></div>
+<video autoplay muted loop id="myVideo">
+    <source src="../Starter kit/assets/image/demacia.mp4" type="video/mp4">
+  </video>
 
-    <div class="regroupement">
+  <video autoplay muted loop id="myVideo2">
+    <source src="../Starter kit/assets/image/noxus.mp4" type="video/mp4">
+  </video>
+  <div class="espaceurgros"></div>
+    <div class="regroupement" id="fond">
 
-        <div class="gauche">
-            <h2>Citation gauche</h2>
+        <div class="gauche" id="gauchehover">
+            <span class="heading">
+            <h2>Noxus</h2>
+            <div class="separateur"></div>
             <label for="nombrecitation">Combien de citation voulez vous ? (entre 1 et 5)</label>
-            <input type="text" name="nombrecitation" id="nombrecitation">
-            <span id="error"></span>
-            <button id="citationgauche">Générer une citation</button>
-            
+            <div class="espaceur"></div>
+            <input type="text" name="nombrecitation" id="nombrecitation" class="inputnb">
+            <div id="error"></div>
+            <button id="citationgauche" class="bouton">Générer une citation</button>
+            <div class="espaceur"></div>
             <div id="affichercitationgauche"></div>
+            
+        </span>
         </div>
 
 
-        <div class="droite">
-            <h2>Citation droite</h2>
+        <div class="droite" id="droitehover">
+            <span class="heading">
+            <h2>Demacia</h2>
+            <div class="separateur"></div>
             <label for="nombrecitation">Combien de citation voulez vous ? (entre 1 et 5)</label>
-            <input type="text" name="nombrecitation" id="nombrecitationdroite">
-            <span id="error2"></span>
-            <button id="citationdroite">Générer une citation</button>
+            <div class="espaceur"></div>
+            <input type="text" name="nombrecitation" id="nombrecitationdroite" class="inputnb">
+            <div id="error2"></div>
+            <button id="citationdroite" class="bouton">Générer une citation</button>
+            <div class="espaceur"></div>
             <div id="affichercitationdroite"></div>
+            
+        </span>
         </div>
 
 
     </div>
  
+
 
    
     <script src="assets/js/Js.js"></script>
