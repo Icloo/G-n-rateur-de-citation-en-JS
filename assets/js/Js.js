@@ -137,6 +137,8 @@ fonddemacia.style.display = "block";
 if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
   // true for mobile device
   fondbase.style.display = "block";
+  fondbase.style.width = "100vw";
+  fondbase.style.height = "100vh";
   fondnoxus.style.display = "none";
   fonddemacia.style.display = "none";
 }
@@ -154,6 +156,8 @@ fonddemacia.style.display = "none";
 if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
   // true for mobile device
   fondbase.style.display = "block";
+  fondbase.style.width = "100vw";
+  fondbase.style.height = "100vh";
   fondnoxus.style.display = "none";
   fonddemacia.style.display = "none";
 }
