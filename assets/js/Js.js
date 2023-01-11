@@ -1,8 +1,8 @@
 let citationgauche = document.getElementById('citationgauche');
 let citationsgauche = document.getElementById('affichercitationgauche');
-let listecitationgauchedebut = ['Ekip','Je me sens',"J'arrive",'Tellement',"J'ai fait un rêve",'Chen zen'];
-let listecitationgauchemilieu = [', ekip,','s/o','comme','déter comme','connecté','dans la cuisine'];
-let listecitationgauchefin = [', ekip.',"jvois flou",'le KGB.','pétasse',"j'ai des vertiges",'la prise',"jsuis dans le lin",'un mort vivant'];
+let listecitationgauchedebut = ['Notre puissance','Noxus','Du sang','Toujours','Seul les couards','Un Noxien'];
+let listecitationgauchemilieu = ['est','contrôlera','pour','sur le chemin de','craigent',"n'as jamais"];
+let listecitationgauchefin = ['inégalée !','le monde.','Noxus !','la guerre.','la mort.','la peur.'];
 
 
 
@@ -47,16 +47,16 @@ function generergauche() {
     let randomNumber2 = Math.floor(Math.random()*(listecitationgauchemilieu.length));
     let randomNumber3 = Math.floor(Math.random()*(listecitationgauchefin.length));
     let affichercitationgauche = document.createElement('p');
-    affichercitationgauche.textContent = listecitationgauchedebut[randomNumber] + " " + listecitationgauchemilieu[randomNumber2] + " " + listecitationgauchefin[randomNumber3];
+    affichercitationgauche.textContent = '"' + listecitationgauchedebut[randomNumber] + " " + listecitationgauchemilieu[randomNumber2] + " " + listecitationgauchefin[randomNumber3] + '"';
     citationsgauche.appendChild(affichercitationgauche);
 }
 }
 
 let citationdroite = document.getElementById('citationdroite');
 let citationsdroite = document.getElementById('affichercitationdroite');
-let listecitationdroitedebut = ['Reda','Abdel','Loïc'];
-let listecitationdroitemilieu = ['pas','quinze','long'];
-let listecitationdroitefin = ['la','heure','week'];
+let listecitationdroitedebut = ['Par','Justice','Nous','Protégons','Démacia','Les ennemis'];
+let listecitationdroitemilieu = ['la volonté','sera','faisons','les','pour','de Demacia'];
+let listecitationdroitefin = ['de Demacia.','rendue.','ce qui est juste.','justes.','toujours.','tomberons.'];
 
 citationdroite.addEventListener("click",genererdroite);
 
@@ -98,7 +98,7 @@ function genererdroite() {
     let randomNumber2 = Math.floor(Math.random()*(listecitationdroitemilieu.length));
     let randomNumber3 = Math.floor(Math.random()*(listecitationdroitefin.length));
     let affichercitationdroite = document.createElement('p');
-    affichercitationdroite.textContent = listecitationdroitedebut[randomNumber] + " " + listecitationdroitemilieu[randomNumber2] + " " + listecitationdroitefin[randomNumber3];
+    affichercitationdroite.textContent = '"' + listecitationdroitedebut[randomNumber] + " " + listecitationdroitemilieu[randomNumber2] + " " + listecitationdroitefin[randomNumber3] + '"';
     citationsdroite.appendChild(affichercitationdroite);
 }
 }
@@ -116,3 +116,32 @@ document.getElementById('nombrecitationdroite').addEventListener('keyup', (event
         genererdroite();
     }
 })
+
+
+
+////////////////////////////////////////////////////////////////////////////////////
+
+let hoverdroite = document.getElementById("droitehover");
+let fondnoxus = document.getElementById('myVideo2');
+let fondbase = document.getElementById('myPhoto');
+let fonddemacia = document.getElementById('myVideo');
+let hovergauche = document.getElementById("gauchehover");
+
+
+hoverdroite.addEventListener("mouseover", () => {
+
+fondnoxus.style.display = "none";
+fondbase.style.display = "none";
+fonddemacia.style.display = "block";
+
+
+
+});
+
+hovergauche.addEventListener("mouseover", () => {
+
+fondnoxus.style.display = "block";
+fondbase.style.display = "none";
+fonddemacia.style.display = "none";
+
+});
